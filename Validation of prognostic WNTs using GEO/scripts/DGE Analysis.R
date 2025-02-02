@@ -24,7 +24,8 @@ get_gse_data <- function(gse_id) {
   
   # Ensure colData contains a 'condition' column
   if (!"condition" %in% colnames(colData)) {
-    colData$condition <- factor(rep(c("control", "treatment"), length.out = nrow(colData)))
+    colData$condition <- factor(rep(c("control", "treatment"), 
+                                    length.out = nrow(colData)))
   }
   
   # Check if counts are non-integer and round if necessary
@@ -54,7 +55,9 @@ analyze_dataset <- function(dataset, id) {
   }
   
   # Create DESeq2 dataset
-  dds <- DESeqDataSetFromMatrix(countData = counts, colData = colData, design = ~ condition)
+  dds <- DESeqDataSetFromMatrix(countData = counts, 
+                                colData = colData, 
+                                design = ~ condition)
   dds <- DESeq(dds)
   res <- results(dds)
   res$gene <- rownames(res)
