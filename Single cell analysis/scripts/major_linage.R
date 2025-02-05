@@ -1,4 +1,4 @@
-# Single Cell Analysis
+# Single Cell Analysis (Celltype:major lineage)
 # Author: Muntasim Fuad
 
 # Load required packages
@@ -42,7 +42,7 @@ wnt2_plot <- ggplot(wnt2, aes(x = Datasets,
        fill = "log(TPM/10+1)")
 
 # Save the plots
-ggsave(filename = "Single cell analysis/figures/WNT2.png",
+ggsave(filename = "Single cell analysis/figures/major lineage/WNT2.png",
        plot = wnt2_plot,
        width = 4,
        height = 8,
@@ -76,7 +76,7 @@ wnt7b_plot <- ggplot(wnt7b, aes(x = Datasets,
        fill = "log(TPM/10+1)")
 
 # Save the plots
-ggsave(filename = "Single cell analysis/figures/WNT7B.png",
+ggsave(filename = "Single cell analysis/figures/major lineage/WNT7B.png",
        plot = wnt7b_plot,
        width = 4,
        height = 8,
@@ -111,7 +111,7 @@ wnt11_plot <- ggplot(wnt11, aes(x = Datasets,
        fill = "log(TPM/10+1)")
 
 # Save the plots
-ggsave(filename = "Single cell analysis/figures/WNT11.png",
+ggsave(filename = "Single cell analysis/figures/major lineage/WNT11.png",
        plot = wnt11_plot,
        width = 4,
        height = 8,
@@ -123,3 +123,5 @@ ggsave(filename = "Single cell analysis/figures/WNT11.png",
 write.xlsx(wnt2,"Single cell analysis/outputs/WNT2.xlsx")
 write.xlsx(wnt7b,"Single cell analysis/outputs/WNT7B.xlsx")
 write.xlsx(wnt11,"Single cell analysis/outputs/WNT11.xlsx")
+
+

@@ -66,7 +66,6 @@ analyze_dataset <- function(dataset, id) {
   return(as.data.frame(res))
 }
 
-
 results_list <- Map(analyze_dataset, datasets, gse_ids)
 
 # Combine results
