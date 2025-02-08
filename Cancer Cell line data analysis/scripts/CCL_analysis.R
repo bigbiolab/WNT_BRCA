@@ -6,9 +6,9 @@ library(tidyverse)
 library(cowplot)
 
 # Load gene effect data
-wnt2 <- read.csv("Cell line data analysis/data/WNT2.csv")
-wnt7b <- read.csv("Cell line data analysis/data/WNT7B.csv")
-wnt11 <- read.csv("Cell line data analysis/data/WNT11.csv")
+wnt2 <- read.csv("Cancer Cell line data analysis//data/WNT2.csv")
+wnt7b <- read.csv("Cancer Cell line data analysis//data/WNT7B.csv")
+wnt11 <- read.csv("Cancer Cell line data analysis//data/WNT11.csv")
 
 
 # .........................WNT2.......................................
@@ -42,8 +42,8 @@ wnt2_plot <- ggplot(wnt2, aes(x = Category,
                                     linewidth=1))
 
 # Save the plot
-ggsave(filename = "Cell line data analysis/figures/WNT2.png",
-       plot =wnt2_plot,
+ggsave(filename = "Cancer Cell line data analysis/figures/WNT2.png",
+       plot = wnt2_plot,
        width = 18,
        height = 12,
        units = "in",
@@ -81,8 +81,8 @@ wnt7b_plot <- ggplot(wnt7b, aes(x = Category,
                                     linewidth=1))
 
 # Save the plot
-ggsave(filename = "Cell line data analysis/figures/WNT7B.png",
-       plot =wnt7b_plot,
+ggsave(filename = "Cancer Cell line data analysis/figures/WNT7B.png",
+       plot = wnt7b_plot,
        width = 18,
        height = 12,
        units = "in",
@@ -122,8 +122,8 @@ wnt11_plot <- ggplot(wnt11, aes(x = Category,
                                     linewidth=1))
 
 # Save the plot
-ggsave(filename = "Cell line data analysis/figures/WNT11.png",
-       plot =wnt11_plot,
+ggsave(filename = "Cancer Cell line data analysis/figures/WNT11.png",
+       plot = wnt11_plot,
        width = 18,
        height = 12,
        units = "in",
@@ -140,8 +140,9 @@ figure_ccl <- plot_grid(wnt2_plot, wnt7b_plot, wnt11_plot,
                         label_x = -0.01,
                         label_y = 1.02)
 # Export the plot
-save_plot(filename = "Cell line data analysis/figures/CCL.png",
+save_plot(filename = "Cancer Cell line data analysis/figures/CCL.png",
           plot = figure_ccl,
           ncol = 1,
           base_height = 18,
-          base_width = 22)
+          base_width = 22,
+          bg = "white")
